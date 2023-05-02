@@ -9,17 +9,22 @@ const navigate=useNavigate();
     const handler=()=>{
          navigate(`/post/${id}`)
     }
+
+    const handleBack=()=>{
+        navigate(-1)
+    }
     return (
         <div>
             <h2>{userId}</h2>
             <h3>{title}</h3>
             <p><Link to={`/post/${id}`}>PostDetails</Link></p>
-            <Link to={`/post/${id}`}><button>Shoe details button uding link</button></Link>
+            <Link to={`/post/${id}`}><button>Shoe details button using link</button></Link>
 
             {/* useNavigate hook */}
             <button onClick={handler}>
           with navigatehook button
             </button>
+            <button onClick={handleBack}>go  back</button>
             
             
         </div>
